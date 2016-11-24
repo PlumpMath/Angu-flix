@@ -1,0 +1,82 @@
+body {
+  background-color: lightgrey;
+}
+
+.outerdiv {
+  padding: 20px;
+}
+
+.toprows {
+  background-color: red;
+  padding: 15px;
+}
+
+.row {
+  width: 100%;
+  padding: 15px;
+  padding-left: 30px;
+}
+
+.balance {
+  float: right;
+  color: white;
+  font-family: Oswald;
+  font-size: 20px;
+}
+
+.inputs {
+  height: 30px;
+  width: 250px;
+}
+
+.fa {
+  padding: 10px;
+}
+
+.headline {
+  font-size: 35px;
+  padding-top: 15px;
+}
+
+.title2 {
+  text-align: center;
+  color: white;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+  padding: 3px;
+}
+
+.movie-title {
+  display: inline-block;
+}
+
+.movie-cols {
+  padding: 15px;
+  background-color: white;
+  width: 33%;
+  border: 4px solid lightgrey;
+  height: 700px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}

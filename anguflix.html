@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anguflix</title>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+
+<body ng-app="appName">
+
+<div class="outerdiv" ng-controller="general">
+  <div class="toprows">
+    <div class="col-md-4">
+    <p class="headline"><strong>My Collection</strong></p>
+    </div>
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <p class="balance">
+        Budget left: ${{balance}}
+      </p>
+    </div>
+    <br><br><br><br>
+    <div class="row">
+      <input class="inputs" type="text" placeholder="Search by title">
+      <!-- ng-model="title-search-mycoll" -->
+      <select class="inputs" ng-model="selectYear" ng-options="x for x in years | orderBy: '-x'">
+        <option value>Any year</option>
+      </select>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </div>
+  </div>
+<br><br>
+
+<!-- *****************************!My Collection!******************************** -->
+
+
+
+  <div class="row myCollection">
+    <h3 class="title2"> Select movies from below to add to your collection </h3>
+    <div class="row">
+      <div class="col-md-4 movie-cols" ng-repeat="f in myCol">
+        <div class="movie-container">
+          <div class="image">
+            <img ng-src={{f.img}}>
+          </div>
+          <div class="movie-title">  
+            <h3>{{f.ttl}}</h3>, {{f.prody}}
+          </div>
+          <div class="text">
+            {{f.txt}}
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <hr>
+<!-- ***********************************MOVIES*********************************** -->
+
+
+
+  <div class="row">
+    <h2>All Movies</h2>
+    <input class="inputs" type="text" placeholder="Search by title">
+    <!-- ng-model="title-search-all" -->
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 movie-cols" ng-repeat="e in movies">
+      <a href="#" ng-click="addToMyColl($index)">
+        <div class="movie-container">
+          <div class="image">
+            <img ng-src={{e.img}}>
+          </div>
+          <div class="movie-title">  
+            <h3>{{e.ttl}}</h3>, {{e.prody}}
+          </div>
+          <div class="text">
+            {{e.txt}}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div> 
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
