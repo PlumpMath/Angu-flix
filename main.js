@@ -28,7 +28,7 @@ app.controller('general', function ($scope) {
   $scope.movies = movie;
 
   $scope.addToMyColl = function (i) {
-    $('.title2').remove()
+    $scope.myVar = true
     var exists = false
     for (j=0; j<myCollection.length; j++) {
       if (movie[i].ttl === myCollection[j].ttl) {

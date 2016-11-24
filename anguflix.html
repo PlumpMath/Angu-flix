@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Anguflix</title>
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/angular/angular.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
@@ -43,7 +42,7 @@
 
 
   <div class="row myCollection">
-    <h3 class="title2"> Select movies from below to add to your collection </h3>
+    <h3 class="title2" ng-hide="myVar"> Select movies from below to add to your collection </h3>
     <div class="row">
       <div class="col-md-4 movie-cols" ng-repeat="f in myCol">
         <div class="movie-container">
